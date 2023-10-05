@@ -4,23 +4,10 @@ html(lang="ko")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Webdesigner Mr.Woong site
+        include includes/comm_style.pug
     body 
-    header 
-        div(class="container")
-            div(class="logo_text") Chaewoong Han 
-            nav 
-                ul(id="gnb")
-                    li 
-                        a(href="/") home
-                    li 
-                        a(href="/about") about
-                    li 
-                        a(href="/portfolio") portfolio 
-                    li 
-                        a(href="/contact") contact
+    include includes/comm_header.pug
     main 
         article 
             p 포트폴리오 페이지 입니다.
-    footer
-        hr
-        p copyright&copy; woong. 2023 all rights reserved.
+    include includes/comm_footer.pug
