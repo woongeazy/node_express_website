@@ -6,6 +6,25 @@
     --bg-orange: orange;
 }
 /* common style */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container-wide {
+    width: 100%;
+}
+.upper {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+.caps {
+    text-transform: capitalize;
+}
+.hidden {
+    overflow: hidden;
+}
 .d-flex {
     display: flex;
 }
@@ -20,6 +39,24 @@
 }
 .alin-center {
     align-items: center;
+}
+.my-1 {
+    margin: 1rem 0;
+}
+.my-2 {
+    margin: 2rem 0;
+}
+.my-3 {
+    margin: 3rem 0;
+}
+.py-1 {
+    padding: 1rem 0;
+}
+.py-2 {
+    padding: 2rem 0;
+}
+.py-3 {
+    padding: 3rem 0;
 }
 .gap-1 {
     gap: 1rem;
@@ -37,26 +74,14 @@
 .text_white {
     color: var(--secondary-color);
 }
-
-
-
-
-
-
-
-
-
-
-
+.d-none {
+    display: none;
+}
 
 
 
 
 /* header */
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-}
 .navi {
     background: rgba(0, 0, 0, .3);
     padding: 2rem;
@@ -70,4 +95,24 @@
     font-size: 2rem;
     border-top: 2px solid #fff;
     padding-top: 2rem;
+}
+
+
+/* main > about */
+.avatar {
+    width: 300px;
+    height: 300px;
+    background: var(--third-color);
+    border-radius: 50%
+}
+.my_fan {
+    width: 150px;
+    height: 150px;
+    background: var(--third-color);
+    border-radius: 50%;
+}
+#pf_main > li {
+    background: var(--third-color);
+    height: 350px;
+    flex: 1;
 }

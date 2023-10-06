@@ -6,8 +6,59 @@ html(lang="ko")
         title Webdesigner Mr.Woong site
         include includes/comm_style.pug
     body 
+        h1(class="d-none") home
         include includes/comm_header.pug
     main 
+        h2(class="d-none") home - main
         article 
-            p 메인 처음 홈페이지 입니다
+            h3(class="text-center py-2 upper") about
+            div(class="container d-flex justify-beetwin")
+                div(class="avatar")
+                    img(src="images/avatar.png", alt="아바타")
+                div(class="details")
+                    ul
+                        li 이름 : 한채웅
+                        li 사는곳 : 전남 나주시 빛가람동
+                        li 혈행형 : O 
+                        li 전공 : 자동차과
+                        li MBTI : ENFP
+        article 
+            h3(class="text-center py-2 upper") portfolio
+            ul(class="container mx-auto d-flex justify-between gap-1", id="pf_main")
+                li 
+                    img(src="images/gf_img.jpg", alt="web")
+                li 
+                    img(src="images/gf_img.jpg", alt="web")
+                li 
+                    img(src="images/gf_img.jpg", alt="web")
+
+            div(class="text-center my-2") 
+                button 더보기&plus;
+        article 
+            h3(class="text-center py-2 upper") friendship
+            div(class="container-wide")
+                div(class="container mx-auto d-flex justify-between")
+                    div(class="my_fan hidden")
+                        img(src="images/fav_avatar.png", alt="fav avatar")
+                    div(class="fan_words")
+                        p 236년지기 친구 | 홍길동
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos dolore adipisci voluptatem delectus iure quasi fugiat. Magni magnam quia error ullam assumenda earum placeat deserunt qui, officiis cupiditate ipsam.
+        article 
+            h3(class="text-center py-2 upper") skill &amp; tools
+            div(class="container mx-auto d-flex justify-between")
+                div(class="skill")
+                    h4 skill
+                    ul 
+                        li 언어능력
+                        li 언어능력
+                        li 언어능력
+                div(class="tools")
+                    h4 tools 
+                    ul 
+                        li visual studio code
+                        li visual studio code
+                        li visual studio code
+                        li visual studio code
+                        li visual studio code
+                        li visual studio code
         include includes/comm_footer.pug
