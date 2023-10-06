@@ -116,3 +116,20 @@
     height: 350px;
     flex: 1;
 }
+
+/* about */
+.btn {
+    padding: 0.5rem 1rem ;
+}
+.btn-active {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+.edu_cover {
+    width: 250px;
+    height: 250px;
+    background: var(--third-color);
+}
+.list {
+    list-style: disc inside;
+}
