@@ -6,6 +6,9 @@
     --bg-orange: orange;
 }
 /* common style */
+.d-grid {
+    display: grid;
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -116,6 +119,12 @@
     height: 350px;
     flex: 1;
 }
+[data-type=web],[data-type=graphic] {
+    background: var(--third-color);
+    height: 260px;
+    width: 250px;
+    display: inline-block;
+}
 
 /* about */
 .btn {
@@ -132,4 +141,10 @@
 }
 .list {
     list-style: disc inside;
+}
+
+/* pofol */
+.pf {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
