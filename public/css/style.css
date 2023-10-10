@@ -1,150 +1,180 @@
 @charset "utf-8";
 :root {
-    --primary-color: black;
-    --secondary-color: white;
-    --third-color: gray;
-    --bg-orange: orange;
+  --primary-color: black;
+  --secondary-color: white;
+  --third-color: gray;
+  --bg-orange: orange;
+  --line-color: #a3a3a3;
+  --point-color: red;
 }
 /* common style */
 .d-grid {
-    display: grid;
+  display: grid;
 }
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .container-wide {
-    width: 100%;
+  width: 100%;
 }
 .upper {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 .caps {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 .d-flex {
-    display: flex;
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .alin-center {
-    align-items: center;
+  align-items: center;
 }
 .my-1 {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 .my-2 {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
 .my-3 {
-    margin: 3rem 0;
+  margin: 3rem 0;
 }
 .py-1 {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 .py-2 {
-    padding: 2rem 0;
+  padding: 2rem 0;
 }
 .py-3 {
-    padding: 3rem 0;
+  padding: 3rem 0;
 }
 .gap-1 {
-    gap: 1rem;
+  gap: 1rem;
 }
 .gap-2 {
-    gap: 2rem;
+  gap: 2rem;
 }
 .gap-3 {
-    gap: 3rem;
+  gap: 3rem;
 }
 .h600 {
-    height: 600px;
-    background: url("../images/bg_img.jpg") no-repeat center / cover;
+  height: 600px;
+  background: url("../images/bg_img.jpg") no-repeat center / cover;
 }
 .text_white {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 .d-none {
-    display: none;
+  display: none;
 }
-
-
-
 
 /* header */
 .navi {
-    background: rgba(0, 0, 0, .3);
-    padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
 }
 .slogan_title {
-    font-size: 6rem;
-    font-weight: bold;
-    margin: 2rem 0 2rem 0;
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 2rem 0 2rem 0;
 }
 .slogan_text {
-    font-size: 2rem;
-    border-top: 2px solid #fff;
-    padding-top: 2rem;
+  font-size: 2rem;
+  border-top: 2px solid #fff;
+  padding-top: 2rem;
 }
-
 
 /* main > about */
 .avatar {
-    width: 300px;
-    height: 300px;
-    background: var(--third-color);
-    border-radius: 50%
+  width: 300px;
+  height: 300px;
+  background: var(--third-color);
+  border-radius: 50%;
 }
 .my_fan {
-    width: 150px;
-    height: 150px;
-    background: var(--third-color);
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: var(--third-color);
+  border-radius: 50%;
 }
 #pf_main > li {
-    background: var(--third-color);
-    height: 350px;
-    flex: 1;
+  background: var(--third-color);
+  height: 350px;
+  flex: 1;
 }
-[data-type=web],[data-type=graphic] {
-    background: var(--third-color);
-    height: 260px;
-    width: 250px;
-    display: inline-block;
+[data-type="web"],
+[data-type="graphic"] {
+  background: var(--third-color);
+  height: 260px;
+  width: 250px;
+  display: inline-block;
 }
 
 /* about */
 .btn {
-    padding: 0.5rem 1rem ;
+  padding: 0.5rem 1rem;
 }
 .btn-active {
-    background: var(--primary-color);
-    color: var(--secondary-color);
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 .edu_cover {
-    width: 250px;
-    height: 250px;
-    background: var(--third-color);
+  width: 250px;
+  height: 250px;
+  background: var(--third-color);
 }
 .list {
-    list-style: disc inside;
+  list-style: disc inside;
 }
 
 /* pofol */
 .pf {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* contact */
+.form_rists li {
+  border-top: 1px solid var(--line-color);
+  padding: 1rem 0;
+}
+.d-flex label {
+  display: block;
+  flex: 0 0 10rem; /*촉소 안되고, 확대 안돼고, 기본 크기10rem*/
+  font-weight: bold;
+}
+.d-flex textarea {
+  flex: 0 0 50%;
+}
+.tip {
+  color: var(--third-color);
+}
+.red {
+  color: var(--point-color);
+}
+[type="text"],
+[type="tel"],
+[type="email"],
+textarea {
+    padding: 0.25rem 0.5rem;
+    outline: none;
+    border :1px solid var(--line-color)
 }
