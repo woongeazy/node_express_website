@@ -178,3 +178,18 @@ textarea {
     outline: none;
     border :1px solid var(--line-color)
 }
+
+.contact_list,
+.contact_list th,
+.contact_list td {
+  border: 1px solid var(--primary-color);
+  border-collapse: collapse;
+}
+.contact_list th,
+.contact_list td {
+  padding: 1rem 0;
+}
+.contact_list th {
+  background: var(--third-color);
+  color: var(--secondary-color);
+}
