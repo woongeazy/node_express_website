@@ -64,8 +64,10 @@ app.get("/contactDel", (req, res) => {
   // console.log('전달받은 값 : '+req.query.id);
   let del_no = req.query.id;
   let sql = `DELETE from contact.contacts WHERE id=${del_no}`;
-  console.log("문의가 삭제되었습니다");
-  res.send("<script>alert('삭제 되었습니다'); location.href='/contactList';</script>");
+  conn.query(sql, function (err, results, fields) {
+    console.log("문의가 삭제되었습니다");
+    res.send("<script>alert('삭제 되었습니다'); location.href='/contactList';</script>");
+  });
 })
 app.get("/contactList", (req, res) => {
   // http://localhost/contactList
