@@ -48,7 +48,7 @@ app.post("/contactAdd", (req, res) => {
   let memo = req.body.memo;
   // console.log(type, name, phone, email, title, memo);
   let sql = `INSERT INTO contact.contacts (gubun, name, phone, email, title, memo, regdate)
-  VALUES ('${type}', '${name}', '${phone}', '${email}', '${title}', '${memo}', current_time()) `;
+  VALUES ('${type}', '${name}', '${phone}', '${email}', '${title}', '${memo}', DATE_FORMAT(now(), '%y/%m/%d'))`;
 
   //query 실행명령
   conn.query(sql, function (err, results, fields) {
@@ -58,6 +58,15 @@ app.post("/contactAdd", (req, res) => {
   });
 });
 
+// 삭제용 쿼리 :3000/contactDel?id=1
+app.get("/contactDel", (req, res) => {
+  // 삭제할 문의 id ==> 예) 1번 문의를 삭제한다면? 1을 전달
+  // console.log('전달받은 값 : '+req.query.id);
+  let del_no = req.query.id;
+  let sql = `DELETE from contact.contacts WHERE id=${del_no}`;
+  console.log("문의가 삭제되었습니다");
+  res.send("<script>alert('삭제 되었습니다'); location.href='/contactList';</script>");
+})
 app.get("/contactList", (req, res) => {
   // http://localhost/contactList
   let sql = "SELECT * FROM contact.contacts ORDER BY id DESC;";

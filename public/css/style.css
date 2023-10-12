@@ -179,6 +179,10 @@ textarea {
     border :1px solid var(--line-color)
 }
 
+.contact_list {
+  width: 100%;
+  text-align: center;
+}
 .contact_list,
 .contact_list th,
 .contact_list td {
@@ -187,9 +191,16 @@ textarea {
 }
 .contact_list th,
 .contact_list td {
-  padding: 1rem 0;
+  padding: .5rem 1rem;
 }
 .contact_list th {
   background: var(--third-color);
   color: var(--secondary-color);
+}
+.contact_list .th-5 {
+  width: 5%;
+  white-space: nowrap;
+}
+.contact_list .th-10 {
+  width: 10%;
 }

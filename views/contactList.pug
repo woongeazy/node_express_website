@@ -25,15 +25,17 @@ html(lang="ko")
                             th 제목
                             th 내용
                             th 등록일
+                            th 관리
                         each data in dataset
                             tr 
-                                td= data.id
-                                td= data.gubun
-                                td= data.name
-                                td= data.phone
+                                td(class="th-5")= data.id
+                                td(class="th-5")= data.gubun
+                                td(class="th-5")= data.name
+                                td(class="th-10")= data.phone
                                 td= data.email
                                 td= data.title
                                 td= data.memo
                                 td= data.regdate
-
+                                td
+                                    button(onclick=`location.href='/contactDel?id=${data.id}'`) 삭제
         include includes/comm_footer.pug
